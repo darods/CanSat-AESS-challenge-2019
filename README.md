@@ -15,7 +15,9 @@ Un CanSat es un pico satélite que tiene el tamaño de una lata de refresco.
 * MPU 6050
 * Xbee S1 (con antena)
 * Adaptador Xbee
-* Bateria Lipo 7.4 V - 1100 mAh
+* Batería 9V
+
+![imagen cansat](/Imagenes/cansat_pcb.jpg)
 
 ### Datos que se obtienen :
  * tiempo que ha transcurrido desde que es encendido
