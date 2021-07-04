@@ -1,36 +1,51 @@
-# CanSat
-Un CanSat es un pico satélite que tiene el tamaño de una lata de refresco.
- Dentro de este van todos los componentes que permiten su funcionamiento,
- como lo son sensores que obtienen datos, las baterías que permiten que se mantenga
- encendido, un paracaídas y demás implementos que dependen del objetivo de este.
+# CanSat AESS Challenge 2019
+A CanSat is a small satellite the size of a can. Inside it has all the normal components that a satellite has, such as sensors, transmission, batteries, parachuting, etc.
 
- El objetivo de este CanSat es el medir variables relacionados con el movimiento,
- la altura y la temperatura que se presentan dentro de su contenedor.
+The purpose of this CanSat is to record variables related to movement, altitude and temperature within its container, and for that it was made to participate in the IEEE AESS CanSat Innovation Challenge 2019.
 
- Este proyecto se deriva de la OBC (On Board Computer) hecha para el cohete modelo POA en la Universidad Distrital Francisco José de Caldas.
+This is a dervided project of the On Board Computer of the POA model rocket made by the ATL research hotbed at  Universidad Distrital Francisco José de Caldas.
 
-### Sensores y electrónicos utilizados
+### Materials
 * Arduino pro mini (5v)
-* BMP 280 (Versión China)
-* MPU 6050
-* Xbee S1 (con antena)
-* Adaptador Xbee
-* Batería 9V
+* GY-BME/P 280 (you have to change the I2C address)
+* MPU6050
+* Xbee S1 (with antenna)
+* Xbee explorer
+* 9V Battery
 
-![imagen cansat](/Imagenes/cansat_pcb.jpg)
+![pbc cansat](/img/cansat_pcb.jpg)
 
-### Datos que se obtienen :
- * tiempo que ha transcurrido desde que es encendido
- * altura relativa
- * si está en caída libre
- * temperatura
- * presión atmosférica
+### Sensor data:
+ * time since it is turned on
+ * relative altitude
+ * free fall state
+ * temperature
+ * atmosferic pressure
  * pitch
  * roll
  * yaw
- * aceleración en X
- * aceleración en Y
- * aceleración en Z
+ * acceleration in X
+ * acceleration in Y
+ * acceleration in Z
 
- La toma de datos se hace cada 500 ms, parametro que puede ser modificado en
- la pestaña `CanSat-codigo.ino`
+ Information is captured every 500 ms.
+
+### Diagrams
+
+#### Circuit diagram
+![Circuit diagram made with fritzing](/img/circuit_diagram.png)
+
+#### PCB layout
+![pbc layout made with fritzing](/img/pcb_diagram.png)
+
+#### External structure
+![External structure made with blender](/img/structure_3D.png)
+
+### Test
+The test consist of powering the OBC to send data to the xbee reciver and printing the recived data in XCTU.
+![sending data](/img/pcb_battery_9v.jpg)
+![sending data](/img/recived_data_xctu.jpg)
+
+
+## Licence 
+MIT.
